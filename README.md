@@ -1,6 +1,9 @@
 # Quiz App
 
 A quiz application that allows users to take quizzes on various topics, view their results, and retake quizzes. The application supports dark mode and provides detailed solutions for each quiz question.
+![image](https://github.com/user-attachments/assets/328ca43e-5c99-41bc-9964-262bd7c3aafa)
+
+
 
 ## Table of Contents
 
