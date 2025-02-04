@@ -1,0 +1,499 @@
+/* Base Styles */
+.initialScreenWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.countDownWrapper {
+  background: linear-gradient(120deg, #fff 40%, #f4801c 40%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Initial Screen Styling */
+.boxStyling {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 140px;
+  font-weight: 700;
+  font-family: "Castoro Titling", cursive;
+}
+
+.leftDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 140px;
+  font-weight: 700;
+  font-family: "Castoro Titling", cursive;
+  background-color: #f4801c;
+  color: #000;
+  justify-content: flex-end;
+  padding-left: 1em;
+  transition: all 0.3s ease;
+}
+
+.rightDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 140px;
+  font-weight: 700;
+  font-family: "Castoro Titling", cursive;
+  background-color: #fff;
+  color: #000;
+  justify-content: flex-start;
+  padding-right: 1em;
+  transition: all 0.3s ease;
+}
+
+.btnDiv {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btnDiv button {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Castoro", cursive;
+  line-height: 48px;
+  width: 250px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btnDiv button:hover {
+  background-color: #ffae67;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btnDiv button span {
+  padding-right: 10px;
+}
+
+/* Counter Screen Styling */
+.counter {
+  width: 300px;
+  height: 300px;
+  margin: 1em 4em;
+  background-color: #f4801c;
+  border-radius: 5%;
+  box-shadow: -5px 1px 63px -21px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.counterInfoStyling {
+  font-family: "Castoro", cursive;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numberStyling {
+  font-family: "Castoro", cursive;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 130px;
+  font-weight: 900;
+  transition: all 0.3s ease;
+}
+
+.textStyling {
+  font-family: "Castoro", cursive;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.instructionsDiv {
+  width: 40%;
+  height: auto;
+  margin: 1em 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.instructionsDiv h3 {
+  font-family: "Castoro Titling", cursive;
+  font-size: 35px;
+  font-weight: 800;
+  padding-bottom: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.instructionsDiv li {
+  width: 100%;
+  font-family: "Castoro", serif;
+  font-size: 23px;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.darkMode {
+  background: #1a1a1a !important;
+}
+
+.darkModeCounter {
+  background-color: #3e0808 !important;
+}
+
+.darkModeInstructions {
+  background-color: #171e6c !important;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.darkModeText {
+  color: white !important;
+}
+
+.countDownWrapper.darkMode {
+  background: linear-gradient(120deg, #171e6c 40%, #3e0808 40%) !important;
+}
+
+.darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f88e64;
+  transition: all 0.3s ease;
+}
+
+.darkMode .darkModeToggle {
+  color: white;
+}
+
+.darkModeToggle:hover {
+  color: #aaa;
+}
+
+.darkLeft {
+  background-color: #171e6c !important;
+  color: white !important;
+}
+
+.darkRight {
+  background-color: #3e0808 !important;
+  color: white !important;
+}
+
+.darkModeButton {
+  background-color: #7d3131 !important;
+  color: white !important;
+  border: 1px solid #fff !important;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.darkModeButton:hover {
+  background-color: #303680 !important;
+  color: white !important;
+  border: 1px solid #fff !important;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.initialScreenWrapper {
+  animation: slideIn 0.8s ease-out;
+}
+
+.countDownWrapper {
+  animation: slideOut 0.8s ease-in;
+}
+
+/* RubberBand Animation */
+@keyframes rubberBand {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+  40% {
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+  50% {
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+  65% {
+    transform: scaleX(0.95) scaleY(1.05);
+  }
+  75% {
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.rubberBand {
+  display: inline-block;
+  animation: rubberBand 1.8s ease-in-out;
+}
+
+/* Tada Animation */
+@keyframes animateTada {
+  0% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.textStyling {
+  opacity: 0;
+  animation: animateTada 1s ease-in-out 1.8s forwards;
+}
+
+/* Button Animation */
+@keyframes buttonTada {
+  0% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btnDiv button {
+  animation: buttonTada 1s ease-in-out 1.6s;
+}
+
+/* Responsive Styles */
+@media (max-width: 1180px) {
+  .boxStyling,
+  .leftDiv,
+  .rightDiv {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 750px) {
+  .boxStyling,
+  .leftDiv,
+  .rightDiv {
+    font-size: 80px;
+  }
+
+  .instructionsDiv {
+    margin: 1em 2em;
+  }
+
+  .instructionsDiv h3 {
+    font-size: 28px;
+  }
+
+  .instructionsDiv li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .boxStyling,
+  .leftDiv,
+  .rightDiv {
+    font-size: 60px;
+  }
+
+  .countDownWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .instructionsDiv {
+    margin: 2em;
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .boxStyling,
+  .leftDiv,
+  .rightDiv {
+    font-size: 40px;
+  }
+
+  .counter {
+    width: 200px;
+    height: 200px;
+    margin: 1em 2em;
+  }
+
+  .numberStyling {
+    font-size: 80px;
+  }
+
+  .textStyling {
+    font-size: 60px;
+  }
+
+  .instructionsDiv {
+    margin: 2em;
+    width: 60%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 440px) {
+  .boxStyling,
+  .leftDiv,
+  .rightDiv {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 330px) {
+  .counter {
+    width: 200px;
+    height: 200px;
+    margin: 1em 2em;
+  }
+
+  .numberStyling {
+    font-size: 80px;
+  }
+
+  .textStyling {
+    font-size: 60px;
+  }
+
+  .instructionsDiv {
+    margin: 1em;
+    width: 80%;
+    height: 80%;
+  }
+
+  .instructionsDiv h3 {
+    font-size: 20px;
+  }
+
+  .instructionsDiv li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 300px) {
+  .boxStyling,
+  .leftDiv,
+  .rightDiv {
+    font-size: 30px;
+  }
+
+  .btnDiv button {
+    font-size: 16px;
+    width: 200px;
+    line-height: 20px;
+  }
+
+  .counter {
+    width: 160px;
+    height: 160px;
+    margin: 1em;
+  }
+
+  .numberStyling {
+    font-size: 50px;
+  }
+
+  .textStyling {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 200px) {
+  .boxStyling,
+  .leftDiv,
+  .rightDiv {
+    font-size: 20px;
+  }
+
+  .btnDiv button {
+    font-size: 12px;
+    width: 150px;
+    line-height: 20px;
+  }
+}

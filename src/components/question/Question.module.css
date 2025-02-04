@@ -1,0 +1,136 @@
+.questionDiv {
+  padding: 1em 1em;
+  transition: all 0.3s ease;
+}
+
+.question {
+  font-family: "Castoro", cursive;
+  font-size: 21px;
+  font-weight: 700;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.options {
+  font-family: "Castoro", cursive;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.optionStyling {
+  list-style-type: none;
+  padding: 0.25em 1em;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.option {
+  composes: optionStyling;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+
+.correctOption {
+  composes: optionStyling;
+  background-color: #e8f5e9;
+  border: 1px solid #4caf50;
+}
+
+/* Dark Mode Styles */
+.darkModeQuestionDiv {
+  background-color: #1a1a1a;
+}
+
+.darkModeText {
+  color: white !important;
+}
+
+.darkModeOptions {
+  background-color: #2a2a2a;
+}
+
+.darkModeOption {
+  background-color: #3a3a3a !important;
+  border: 1px solid #555 !important;
+  color: #e0e0e0;
+}
+
+.darkModeCorrectOption {
+  background-color: #2e7d32 !important;
+  border: 1px solid #4caf50 !important;
+  color: white !important;
+}
+
+/* Hover Effects */
+.option:hover {
+  background-color: #e0e0e0;
+}
+
+.darkModeOption:hover {
+  background-color: #4a4a4a !important;
+}
+
+/* Add to Question.module.css */
+.questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.questionInfo {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.marks {
+  background: #f0f0f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.solutionSection {
+  margin-top: 1rem;
+}
+
+.solutionButton {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.solution {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Dark mode styles */
+.darkModeSolutionButton {
+  border-color: #444;
+  color: #fff;
+}
+
+.darkModeSolution {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.darkMode .marks {
+  background: #333;
+  color: #fff;
+}

@@ -1,0 +1,502 @@
+/* QuizScreen.module.css */
+.quizScreenWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #ff741e;
+  transition: all 0.3s ease;
+}
+
+.quizCard {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Quiz Header Styles */
+.quizHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.quizTitle {
+  flex: 1;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.topic {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.questionInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.activeQuestionNo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f4801c;
+}
+
+.totalQuestion {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* Quiz Meta Information */
+.quizMeta {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metaLabel {
+  font-weight: 500;
+  color: #666;
+}
+
+.metaValue {
+  color: #333;
+}
+
+/* Question Content */
+.questionContent {
+  margin: 2rem 0;
+}
+
+.questionText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Options Styles */
+.optionsDiv {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.option {
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.option:hover {
+  border-color: #f4801c;
+  transform: translateY(-2px);
+}
+
+.selectedAnswer {
+  border-color: #f4801c;
+  background: #fff3e0;
+  position: relative;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Description Button */
+.descriptionBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 2px solid #f4801c;
+  color: #f4801c;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+.descriptionBtn:hover {
+  background: #f4801c;
+  color: white;
+}
+
+.description {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Navigation Buttons */
+.btnDiv {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nextBtnDiv {
+  padding: 0.75rem 2rem;
+  background: #f4801c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nextBtnDiv:hover {
+  background: #e67300;
+  transform: translateY(-2px);
+}
+
+.disabledDiv {
+  padding: 0.75rem 2rem;
+  background: #ccc;
+  color: #666;
+  border: none;
+  border-radius: 8px;
+  cursor: not-allowed;
+}
+
+/* Result Screen Styles */
+.resultScreen {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resultHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resultHeader h3 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.resultContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.resultStats {
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.resultStats p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.resultChart {
+  width: 200px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Review and Retake Buttons */
+.reviewBtn, .retakeBtn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.reviewBtn {
+  background: #2196f3;
+  color: white;
+}
+
+.retakeBtn {
+  background: #4caf50;
+  color: white;
+}
+
+.reviewBtn:hover, .retakeBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* Dark Mode Styles */
+.darkMode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.darkModeResultScreen {
+  background: #2a2a2a; /* Dark background for result screen */
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.darkModeQuizCard {
+  background: #2a2a2a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.darkMode .title,
+.darkMode .questionText {
+  color: #fff;
+}
+
+.darkMode .topic {
+  color: #bbb;
+}
+
+.darkMode .option {
+  background: #333;
+  border-color: #444;
+  color: #fff;
+}
+
+.darkMode .selectedAnswer {
+  background: #4a3928;
+  border-color: #f4801c;
+}
+
+.darkMode .description {
+  background: #333;
+  color: #fff;
+}
+
+.darkMode .quizMeta {
+  background: #333;
+}
+
+.darkMode .metaLabel {
+  color: #bbb;
+}
+
+.darkMode .metaValue {
+  color: #fff;
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #f4801c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+/* Timer Styles */
+.timer {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.darkMode .timer {
+  background: #333;
+  color: white;
+}
+
+/* Progress Bar */
+.progressBar {
+  height: 4px;
+  background: #ddd;
+  margin: 1rem 0;
+  border-radius: 2px;
+}
+
+.progressFill {
+  height: 100%;
+  background: #f4801c;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.darkMode .resultStats {
+  background: #9c8c8c;
+  color: #ffffff;
+}
+
+/* Dark Mode Text Colors */
+.darkModeText {
+  color: #fbfbfb;
+}
+
+.darkMode .progressBar {
+  background: #444;
+}
+
+.darkMode .CircularProgressbar text {
+  fill: #ffffff !important; /* Force white text in dark mode */
+}
+
+.darkMode .CircularProgressbar-trail {
+  stroke: #444 !important; /* Darker trail in dark mode */
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quizScreenWrapper {
+    padding: 1rem;
+  }
+
+  .quizCard {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .resultContent {
+    grid-template-columns: 1fr;
+  }
+
+  .optionsDiv {
+    grid-template-columns: 1fr;
+  }
+
+  .btnDiv {
+    flex-direction: column;
+  }
+
+  .btnDiv button {
+    width: 100%;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .quizScreenWrapper {
+    padding: 0;
+  }
+
+  .btnDiv,
+  .timer,
+  .darkModeToggle {
+    display: none;
+  }
+}
+
+/* Add these styles to QuizScreen.module.css */
+
+/* Dark Mode Toggle Button */
+.darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #f4801c;
+  color: #f4801c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.darkModeToggle:hover {
+  transform: scale(1.1);
+  background: #f4801c;
+  color: #ffffff;
+}
+
+/* Dark Mode Toggle Button - Dark Mode State */
+.darkMode .darkModeToggle {
+  background: #333;
+  border-color: #f4801c;
+  color: #f4801c;
+}
+
+.darkMode .darkModeToggle:hover {
+  background: #f4801c;
+  color: #333;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .darkModeToggle {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Ensure button stays visible when scrolling */
+.darkModeToggle {
+  position: fixed;
+}
